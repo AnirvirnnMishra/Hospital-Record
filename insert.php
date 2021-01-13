@@ -577,17 +577,7 @@ tr input[type=text],tr input[type=date]{
 				    
 				
 			}
-			// echo var_dump($med_array);
-
-
-
-            // echo $Patient_Query;
-            // KAL KARENGE isKE BAAAAAAAAAAAD
-            
-
-
-			// if (isset())
-			// inserted in Patient table
+		
 			if ($x)
 			{
 				mysqli_query($connection,$Patient_Query);
@@ -598,14 +588,15 @@ tr input[type=text],tr input[type=date]{
 			// echo $Patient_ID;
 			if($x)
 			{
-					$prescription_query="insert into ubid2dcv_hospital.Prescription(uhid,MedicineID,Dose,Morning,Afternoon,Evening,Night,StartDate,EndDate,SpecificSymptom,DateAppointment) values( ";
+					$prescription_query="insert into ubid2dcv_hospital.Prescription(uhid,MedicineID,Dose,Morning,Afternoon,Evening,Night,StartDate,EndDate,DateAppointment,SpecificSymptom) values( ";
 
 				for($i=1;$i<20;$i++)
 				{
 					$j=1;
 					$prescription_query_values="$Patient_ID,";
 					if(isset($med_array["Medication,".$i]))
-					{$prescription_query_values.= $med_array["Medication,".$i][0].", "; 
+					{
+						$prescription_query_values.= $med_array["Medication,".$i][0].", "; 
 					$j+=1;
 					$prescription_query_values.="'".$med_array["Medication,".$i]["dose"]."',";
 					if(1)
@@ -673,13 +664,15 @@ tr input[type=text],tr input[type=date]{
 					$prescription_query_values.="cast('".$med_array["Medication,".$i]["stop_date"]."' as date ),";
 					
 					$prescription_query_values.="cast('".$_POST["dop"]."' as date),"; 
+					
+
 
 					if(1)
 					{
 						$j+=1;
-						if(isset($med_array["Medication,".$i]["on_specific_symptom"]))
+						if(isset($med_array["Medication,".$i]["on_specific_symptom"]) && trim($med_array["Medication,".$i]["on_specific_symptom"])!='')
 						{
-							$prescription_query_values.="'".$med_array["Medication,".$i]["on_specific_symptom"]."',";
+							$prescription_query_values.="'".$med_array["Medication,".$i]["on_specific_symptom"]."');";
 							
 						}
 						else
@@ -690,6 +683,7 @@ tr input[type=text],tr input[type=date]{
 					}
 
 					$total_prescription_query=$prescription_query." ". $prescription_query_values;
+					echo $total_prescription_query;
 
 					mysqli_query($connection,$total_prescription_query);
 				// echo $total_prescription_query;
@@ -702,17 +696,7 @@ tr input[type=text],tr input[type=date]{
 		}
 			}
 			
-			// echo var_dump(mysqli_fetch_row($Patient_ID));
 			
-
-
-			// array(2) { ["Medication,1"]=> array(7) { [0]=> string(1) "9" [1]=> string(11) "kfheiufhwiu" ["morning"]=> string(2) "on"
-			// 	["afternoon"]=> string(2) "on" ["evening"]=> string(2) "on" ["start_date"]=> string(10) "2023-05-03" ["stop_date"]=> string(10) 
-			// 	"2022-03-03" } ["Medication,2"]=> array(6) { [0]=> string(1) "3" [1]=> string(6) "Calpol" ["evening"]=> string(2) "on" ["night"]=> 
-			// 	string(2) "on" ["start_date"]=> string(10) "2021-01-01" ["stop_date"]=> string(10) "2021-02-01" } } 14
-
-
-
 
         }
 
