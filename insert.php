@@ -683,7 +683,7 @@ tr input[type=text],tr input[type=date]{
 					}
 
 					$total_prescription_query=$prescription_query." ". $prescription_query_values;
-					echo $total_prescription_query;
+					// echo $total_prescription_query;
 
 					mysqli_query($connection,$total_prescription_query);
 				// echo $total_prescription_query;
@@ -696,7 +696,13 @@ tr input[type=text],tr input[type=date]{
 		}
 			}
 			
+
+	
+			if(!mysqli_error($connection))
 			
+			{
+				echo "<script>alert('Submitted Successfully');window.location='homepage.php'</script>";
+			}
 
         }
 
@@ -814,7 +820,7 @@ function submit() {
 
     // loop through each row of the table.
     for (row = 1; row < myTab.rows.length - 1; row++) {
-        // loop through each cell in a row.
+        // loop through each cell in a row.end
         for (c = 0; c < myTab.rows[row].cells.length; c++) {
             var element = myTab.rows.item(row).cells[c];
             if (element.childNodes[0].getAttribute('type') == 'text') {
