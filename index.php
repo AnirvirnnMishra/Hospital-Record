@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><title>Medwin Cares</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -8,22 +8,72 @@ body {font-family: Arial, Helvetica, sans-serif;}
   box-sizing: border-box;
 }
 body{
-	background-image:linear-gradient(90deg, #e56849 0%, #d51f77 100%);
-	padding:10px;
+	background-color:#white;
+	margin:0;
+	padding:0;
 	
 	}
-.content{font-family: 'Libre Franklin',sans-serif;}
-.header{
-	background-size:auto;
-	background-color:rgba(255,255,255,0.1);
-	padding:30px;
-	text-align:center;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	border-top-left-radius:5px;
-	border-top-right-radius:5px;
-	color:white;
+
+.content{
+	font-family: 'Libre Franklin',sans-serif;
+	margin:10px;
 	}
-	
+.glow{-webkit-animation:colorchange 7s infinite alternate;font-weight:bold;}
+@-webkit-keyframes colorchange {
+      0% {
+        
+        color: blue;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #1abc9c;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: #34495e;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: pink;
+      }
+    }	
 h1{
 	font-style:italic;
 	font-size:50px;
@@ -35,39 +85,45 @@ h1{
 ul {
   list-style-type: none;
   margin:0;
-  padding:0;
+  padding:16px;
+  position:sticky;
+  top:0;
   overflow: hidden;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,96,255,0.8);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-  border-bottom-left-radius:20px;
-  border-bottom-right-radius:20px;
+  
 
 }
 li {
   float: left;
+  width:200px;
+  
 }
 li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 20px;
+  font-size:25px;
   text-decoration: none;
+  margin-top:25px;
+ 
 }
 
 li a:hover {
-  background-color: rgba(1,1,1,0.2);
+  background-color: #EF820D;
+  border-radius:40px;
+  transition:background 0.3s;
 }
 
-
-
-
 @media screen and (max-width:600px){
-	li{
-	float:left;
+	li {
+	float:none;
 	width:100%;
 	text-align:center;
 	}
-	.dropdown-content{width:92.80%;}
+	#cares{display:none;}
+	
 }
 
 input[type=text], input[type=password] {
@@ -75,16 +131,17 @@ input[type=text], input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  
+  border:1px solid #333;
   box-sizing: border-box;
 }
 
 button {
-  background-color: rgb(1,1,1,0);
-  color: white;
+  background-color:white;
+  color: rgb(0,96,255);
   padding: 14px 20px;
   margin: 8px 0;
-  border: 2px solid rgb(230,230,230,0.7);
+  border: 2px solid rgb(0,96,255,0.7);
   cursor: pointer;
   width: 100%;
   border-radius:40px;
@@ -97,7 +154,7 @@ button:hover {
   color:white;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border:2px solid rgb(0,96,255);
-  transition:background 0.6s;
+  transition:background 0.3s;
   
   
 }
@@ -111,7 +168,11 @@ button:hover {
   border-radius:3px;
   opacity:0.8;
 }
-.cancelbtn:hover{opacity:1;background-color:#f44336;border:none;}
+.cancelbtn:hover{
+	opacity:1;
+	background-color:#f44336;
+	border:none;
+	}
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
@@ -183,7 +244,7 @@ span.psw {
   to {transform: scale(1)}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   span.psw {
      display: block;
      float: none;
@@ -192,71 +253,83 @@ span.psw {
      width: 100%;
   }
   .modal-content{width:80%;}
+  .leftcolumn,.rightcolumn{float:none;width:100%;}
+
   
 }
-#mySidenav a {
-  position: fixed;
-  left: -90px;
-  transition: 0.3s;
-  padding: 15px;
-  width: 100px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 0 5px 5px 0;
-  text-align:left;
-}
 
-#mySidenav a:hover {
-  left: 0;
-}
+.modal-login{
+	color:rgb(0,96,255);
+	}
+.modal-login:hover{
+	color:white;
+	}
+.Header1 {
+	text-align:center;
+	padding:2px;
+	background-color:#FFFFFF;
+	}
+.Header1 a{
+	text-decoration:none;
+	}
+.Header1 a:hover{
+	color:red;
+	text-decoration:underline;
+	}
+.leftcolumn{
+	font-size:50px;
+	margin-left:20px;
+	margin-top:80px;
+	width:70%;
+	color:rgb(0,96,255,0.8);
+	float:left;
+	}
+.rightcolumn{
+	margin-left:0;
+	width:30%;
+	float:left;
+	margin-top:120px;
+	}
+#cares{
+	margin-left:135px;
+	font-weight:bold;
+	}
+footer{
+	position:fixed;
+	bottom:0;
+	color:white;
+	background-color:rgb(0,96,255);
+	width:100%;
+	margin:0;
+	padding:10px;
+	text-align:center;
+	font-size:12px;
+	font-weight:thin;
+	}
 
-#about {
-  top: 55%;
-  background-color: #4CAF50;
-}
-
-#blog {
-  top: 60%;
-  background-color: #2196F3;
-}
-
-#projects {
-  top: 65%;
-  background-color: #f44336;
-}
-
-#contact {
-  top: 70%;
-  background-color: #555
-}
-.modal-login{color:rgb(0,96,255);}
-.modal-login:hover{color:white;}
 </style>
 </head>
 <body>
-
-<div class="header">
-		<h1>My Website</h1>
-		<p>Resize to see the responsive effect</p>
-	</div>
-	<div id="mySidenav" class="sidenav">
-		<a href="#" id="about">About</a>
-		<a href="#" id="blog">Blog</a>
-		<a href="#" id="projects">Projects</a>
-		<a href="#" id="contact">Contact</a>
+	<div class="Header1">
+	<p class="glow">Important  !!!! : COVID-19 Guidelines and Updates  <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance" target=_blank>Click Here
+</a></p>
 	</div>
 		<ul>
-			<li style="background-color:green;"><a href="#">Home</a></li>
-			<li><a href="#">Contact</a></li>
-			<li style="float:right;"><a href="#">About</a></li>
+			<li id="medwin" style="margin-top:15px;font-size:80px;font-family: 'Libre Franklin',sans-serif;font-weight:bold;color:white;font-style:italic;">MEDWIN</li>
+			<li id="cares" style="margin-top:45px;font-size:45px;color:white;padding-left:10px;"><i>CARES</i></li>
+			<li><img src="PngItem_4915049.png" style="height:auto;width:120px;margin-left:-20px;"></li>
+			<li style="float:right;"><a href="about.html">About</a></li>
+			<li style="float:right;"><a href="contact.html">Contact</a></li>
 			</a>
-
 		</ul>
 <div class="content">
-<h2 style="font-family: 'Libre Franklin', sans-serif;">Login Form</h2>
-
+<div class="leftcolumn">
+<h2 style="font-family: 'Libre Franklin', sans-serif;">Known for our expertise. Chosen for our care.
+</h2>
 	<button id="logIN" onclick="document.getElementById('id01').style.display='block'" style="width:250px;font-size:25px;">Login</button>
+</div>
+<div class="rightcolumn">
+</div>
 
 	<div id="id01" class="modal">
   
@@ -284,7 +357,7 @@ span.psw {
 		<span class="psw"><a href="#">Forgot password</a></span>
 		</div>
     </form>
-    <?php
+<?php
     require_once "connect.php";
     session_start(['cookie_lifetime' => 86400]);
     $_SESSION["login"]=false;
@@ -319,21 +392,23 @@ span.psw {
 
     }
     ?>
-
-
 	</div>
-</div>
 
+</div>
+<footer>
+			<p id="copyright">Copyright &copy; 2021 by MEDWIN CARES. Questions?
+			<a href="mailto:youthnationcoders69@gmail.com.com" style="color:white;">Mail the Webmaster</a></p>
+</footer>
 <script>
-// Get the modal
 var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
+
 </script>
 
 </body>

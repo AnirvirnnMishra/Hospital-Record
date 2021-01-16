@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><title>MY WEBSITE</title>
+<html><head><title>Insert</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -9,8 +9,10 @@ html{scroll-behavior:smooth;}
   box-sizing: border-box;
 }
 body{
-	background: linear-gradient(156deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 26%, rgba(252,176,69,1) 100%);
-	padding:10px;
+	background-color:white;
+	margin:0;
+	padding:0;
+	
 	}
 	
 fieldset {
@@ -21,87 +23,57 @@ fieldset {
   padding-bottom: 0.625em;
   padding-left: 0.75em;
   padding-right: 0.75em;
-  border: 7px inset red;
+  border: 7px outset rgb(0,96,255);
   border-radius:10px;
 }	
 
-.header{
-	background-size:auto;
-	background-color:white;
-	padding:30px;
-	text-align:center;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	border-top-left-radius:5px;
-	border-top-right-radius:5px;
-	}
-	
-h1{
-	font-style:italic;
-	font-size:50px;
-	text-shadow:1px 1px 5px #aaa;
-	}
 	
 ul {
   list-style-type: none;
   margin:0;
-  padding:0;
+  padding:16px;
+  
   overflow: hidden;
-  background-color: #333;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-bottom-left-radius:20px;
-  border-bottom-right-radius:20px;
+  background-color: rgba(0,96,255,0.8);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  
 
 }
 li {
   float: left;
+  width:200px;
+  
 }
 li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 20px;
+  font-size:25px;
   text-decoration: none;
+  margin-top:25px;
+ 
 }
 
-li a:hover, .dropdown:hover {
-  background-color: #aaa;
-}
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 190px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  
+li a:hover {
+  background-color: #EF820D;
+  border-radius:40px;
+  transition:background 0.3s;
 }
 
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  display: block;
-  text-align: left;
-  border-bottom:1px solid black;
-}
-
-.dropdown-content a:hover {background-color: #aaa;}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 @media screen and (max-width:600px){
-	li{
-	float:left;
+	li {
+	float:none;
 	width:100%;
 	text-align:center;
 	}
-	.dropdown-content{width:92.80%;}
+	#cares{display:none;}
+	
 }
+#cares{
+	margin-left:135px;
+	font-weight:bold;
+	}
 .leftcolumn{
 	width:25%;
 	float:left;
@@ -110,14 +82,14 @@ li.dropdown {
 	width:25%;
 	float:right;
 	border-radius:10px;
-	border:5px inset crimson;
+	border:5px inset rgb(0,96,255);
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 	background-color:#f9f9f9;
 	
 
 }
 .Form{
-	margin-top:10px;
+	margin-top:30px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	}
 
@@ -155,7 +127,7 @@ input[type=text],input[type=address],input[type=date]{
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
-  border: 2px inset red;
+  border: 2px inset rgb(0,96,255);
   background: #f1f1f1;
   border-radius:10px;
   font-size:15px;
@@ -182,7 +154,7 @@ input[type=radio]{
 }
 
 #myBtn:hover {
-  background-image:linear-gradient(to right,purple,blue);
+  background-image:linear-gradient(to right,rgb(0,96,255),blue);
 }
 
 @media screen and (max-width: 800px) {
@@ -192,7 +164,7 @@ input[type=radio]{
 	float:none;
 	margin:0;
   }
-  .rightcolumn{border:2px inset red;box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);}
+  .rightcolumn{border:2px inset rgb(0,96,255);box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);}
   	#gen{display:block;}
 	#res{margin-top:25px;}
 	#sub{margin-top:25px;}
@@ -221,7 +193,7 @@ th{
 	padding:16px;
 	font-weight:bold;
 	font-size:18px;
-	background-color:#F24646;
+	background-color:rgb(0,96,255,0.7);
 	text-shadow:2px 2px 5px black;
 	color:white;
 	font-family:Arial;
@@ -247,70 +219,22 @@ tr input[type=text],tr input[type=date]{
 .medtable{
 	overflow-x:auto;
 	}
-#mySidenav a {
-  position: fixed;
-  left: -80px;
-  transition: 0.3s;
-  padding: 15px;
-  width: 100px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 0 5px 5px 0;
-}
 
-#mySidenav a:hover {
-  left: 0;
-}
 
-#about {
-  top: 55%;
-  background-color: #4CAF50;
-}
-
-#blog {
-  top: 60%;
-  background-color: #2196F3;
-}
-
-#projects {
-  top: 65%;
-  background-color: #f44336;
-}
-
-#contact {
-  top: 70%;
-  background-color: #555
-}
+legend{color:blue;font-size:25px;font-weight:bold;}
 
 </style>
 </head>
 <body  onload="AddRow('Medication');">
-	<div class="header">
-		<h1>My Website</h1>
-		<p>Resize to see the responsive effect</p>
-	</div>
-	<div id="mySidenav" class="sidenav">
-		<a href="#" id="about">About</a>
-		<a href="#" id="blog">Blog</a>
-		<a href="#" id="projects">Projects</a>
-		<a href="#" id="contact">Contact</a>
-	</div>
+	
+	
 		<ul>
-			<li style="background-color:green;"><a href="#">Home</a></li>
-			<li><a href="#">Contact</a></li>
-			<li class="dropdown">
-				<a href="#">Dropdown</a>
-					<div class="dropdown-content">
-						<a href="#">Link1</a>
-						<a href="#">Link2</a>
-						<a href="#">Link3</a>
-					</div>
-				</div>
-			</li>
-			<li style="float:right;"><a href="#">About</a></li>
+			<li id="medwin" style="margin-top:15px;font-size:80px;font-family: 'Libre Franklin',sans-serif;font-weight:bold;color:white;font-style:italic;">MEDWIN</li>
+			<li id="cares" style="margin-top:45px;font-size:45px;color:white;padding-left:10px;"><i>CARES</i></li>
+			<li><img src="PngItem_4915049.png" style="height:auto;width:120px;margin-left:-20px;"></li>
+			<li style="float:right;"><a href="about.html">About</a></li>
+			<li style="float:right;"><a href="contact.html">Contact</a></li>
 			</a>
-
 		</ul>
 	<div class="Form">
 		<form action="#" method="post">
@@ -400,7 +324,7 @@ tr input[type=text],tr input[type=date]{
 			</fieldset>
 			<div class="medtable">
 							<div class="required">
-								<button onclick="AddRow('Medication');" type="button" style="border:1px inset black;border-radius:50%;padding:7px;font-weight:bold;font-size:15px;margin-bottom:5px;outline:none;background-color:#F24646;color:white;text-shadow:2px 2px 10px black">&nbsp;+&nbsp;</button>
+								<button onclick="AddRow('Medication');" type="button" style="border:1px inset black;border-radius:50%;padding:7px;font-weight:bold;font-size:15px;margin-bottom:5px;outline:none;background-color:rgb(0,96,255);color:white;text-shadow:2px 2px 10px black">&nbsp;+&nbsp;</button>
 								<table border="2px" id="Medication" >
 									<tbody>
 										<tr>
@@ -437,8 +361,8 @@ tr input[type=text],tr input[type=date]{
 						</table>
 					</div>
 				</div>
-				<input type="submit" value="Submit" name="submit_form" style="padding:10px 10px;border-radius:5px; width:120px;margin-left:25%;border:none;" id="sub"></input>
-				<button type ="reset" onclick="window.location.reload();" style="padding:10px 10px;border-radius:5px; width:120px;margin-left:25%;border:none;outline:none;" id="res">Reset</button>
+				<input type="submit" value="Submit" name="submit_form" style="padding:10px 10px;border-radius:20px; width:120px;margin-left:25%;border:2px inset #EF820D;cursor:pointer;background-color:white;color:#EF820D;font-weight:bold;" id="sub"></input>
+				<button type ="reset" onclick="window.location.reload();" style="padding:10px 10px;border-radius:20px; width:120px;margin-left:25%;border:2px inset blue;outline:none;cursor:pointer;background-color:white;" id="res">Reset</button>
 		</form>
 
 
@@ -560,9 +484,13 @@ tr input[type=text],tr input[type=date]{
 
 	
 
-					if(isset($_POST["On_Sepcific_Symptom".",".$i.",".$j]))
+					
+//					echo "<br><br> $i  ";
+//					echo $j;
+//					echo" <br> <br>";
+					if(isset($_POST["On_specific_Symptom".",".$i.",".$j]))
 					{
-						$on_specific_symptom=$_POST["On_Sepcific_Symptom"];
+						$on_specific_symptom=$_POST["On_specific_Symptom"];
 						$med_array["Medication,".$i]+=["on_specific_symptom"=>$on_specific_symptom];
                     }
                 
@@ -670,7 +598,7 @@ tr input[type=text],tr input[type=date]{
 					if(1)
 					{
 						$j+=1;
-						if(isset($med_array["Medication,".$i]["on_specific_symptom"]) && trim($med_array["Medication,".$i]["on_specific_symptom"])!='')
+						if(isset($med_array["Medication,".$i]["on_specific_symptom"]) )
 						{
 							$prescription_query_values.="'".$med_array["Medication,".$i]["on_specific_symptom"]."');";
 							
@@ -683,7 +611,9 @@ tr input[type=text],tr input[type=date]{
 					}
 
 					$total_prescription_query=$prescription_query." ". $prescription_query_values;
-					// echo $total_prescription_query;
+//					echo $total_prescription_query;
+//					echo var_dump($_POST);
+					
 
 					mysqli_query($connection,$total_prescription_query);
 				// echo $total_prescription_query;
@@ -701,18 +631,12 @@ tr input[type=text],tr input[type=date]{
 			if(!mysqli_error($connection))
 			
 			{
-				echo "<script>alert('Submitted Successfully');window.location='homepage.php'</script>";
+				echo "<script>alert('Submitted Successfully');window.location='homepage.php?login=1'</script>";
 			}
 
         }
 
         ?>
-
-
-
-
-
-
 
 	</div>
 	<button onclick="topFunction()" id="myBtn" title="Go to top">&nbsp;^&nbsp;</button>
@@ -820,7 +744,7 @@ function submit() {
 
     // loop through each row of the table.
     for (row = 1; row < myTab.rows.length - 1; row++) {
-        // loop through each cell in a row.end
+        // loop through each cell in a row.
         for (c = 0; c < myTab.rows[row].cells.length; c++) {
             var element = myTab.rows.item(row).cells[c];
             if (element.childNodes[0].getAttribute('type') == 'text') {
